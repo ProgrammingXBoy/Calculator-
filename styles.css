@@ -1,0 +1,75 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(223deg, #1A3147 0%, #0F00BB 100%);
+
+  margin: 0;
+}
+
+.calculator {
+  background-color: #111;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  max-width: 400px;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.display {
+  grid-column: 1 / span 4;
+  text-align: right;
+  padding: 10px;
+  background-color: #000;
+  border-radius: 10px;
+  font-size: 36px;
+  color: #33ff99;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.buttons {
+  grid-column: 1 / span 4;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+button {
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 28px;
+  color: #fff;
+  background-color: #222;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  background-color: #444;
+}
+
+button:active {
+  background-color: #333;
+}
+
+/* Futuristic Animation */
+@keyframes neon-glow {
+  0%, 100% {
+      text-shadow: 0 0 5px #33ff99, 0 0 10px #33ff99, 0 0 20px #33ff99;
+  }
+  50% {
+      text-shadow: 0 0 15px #33ff99, 0 0 30px #33ff99, 0 0 40px #33ff99;
+  }
+}
+
+#result {
+  animation: neon-glow 1s infinite;
+}
